@@ -51,7 +51,7 @@ const rolePrompts = [
   {
     type: "input",
     message: "What is the manager's office number? ",
-    name: "officeNum"
+    name: "officenum"
   }
 ]
 
@@ -109,7 +109,7 @@ function managerPrompt(response){
   inquirer.prompt(rolePrompts[2]).then((response) =>{
     newMan.officenum = response
     console.log(newMan)
-    const manProto = new Manager(newMan.empName, newMan.employeeID, newMan.employeeEmail, newMan.officenum)
+    const manProto = new Manager(newMan.empName, newMan.employeeID, newMan.employeeEmail, newMan.officenum.officenum)
     staff.push(manProto)
     console.log(staff)
     firstQuestion();
